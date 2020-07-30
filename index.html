@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Todos by hiven</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/521d894174.js" crossorigin="anonymous"></script>
+
+  <style>
+    .is-underlined {
+      text-decoration: underline;
+    }
+
+    .name-input {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #363636;
+      border: none;
+      border-bottom: 1px solid hsl(171, 100%, 41%);
+    }
+
+    .edit-input {
+      font-size: 1.5rem;
+      color: #4a4a4a;
+      border: none;
+      border-bottom: 1px solid hsl(171, 100%, 41%);
+    }
+
+    .box {
+      position: relative;
+    }
+
+    .btn-delete {
+      position: absolute;
+      top: -1rem;
+      right: -1rem;
+      padding: .65rem .75rem;
+      color: white;
+      background-color: hsl(348, 100%, 61%);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-2">Hello, <span id="username" class="is-underlined">*username*</span>! This is your personal TODO list.</h2>
+      <h4 class="subtitle is-4 has-text-grey">Start typing in the field below...</h4>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-variable is-1">
+        <div class="column is-11 field">
+          <div class="control">
+            <input id="task-input" class="input is-primary is-large" type="text" placeholder="Input your task here...">
+          </div>
+        </div>
+
+        <div class="column field">
+          <div class="control">
+            <button id="task-save" class="button is-primary is-outlined is-large">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div id="tasks" class="container">
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
